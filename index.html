@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry, My Queen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background YouTube Video -->
+    <div id="video-background">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/se9DDAwwGQY?autoplay=1&mute=0&loop=1&playlist=se9DDAwwGQY" frameborder="0" allowfullscreen></iframe>
+    </div>
+    
+    <!-- Landing Page -->
+    <div id="landing-page">
+        <h1>Hey dear, I have something for you...</h1>
+        <button id="open-apology">Click to Open</button>
+    </div>
+
+    <!-- Apology Page (Hidden initially) -->
+    <div id="apology-page" class="hidden">
+        <!-- Apology Letter -->
+        <div class="letter">
+            <h2>My Dearest Geet</h2>
+            <p>
+                I am soo sorry for what I have done to you. I never meant to hurt you. Seeing you upset because of me breaks my heart. I know how I messed up that caused you pain. I really lost my senses while talking with you that day. I had promised to never make your happiness go away; but I couldn't keep my promise for that day. And I honestly apologize to you for that.Please give me a chance to make things right. And I swear to you that I won't talk with such an arrogance with you for our entireee life. I know u need time for this, and even it's neccessary; but pleaseee forgive me. I will never ever do this to you dear. I owe my entire life to you. I promise to be better, for you, for us.           </p>
+            <p>Forever yours,</p>
+            <p>Sohan</p>
+        </div>
+
+        <!-- Interactive Heart Animation -->
+        <div class="heart-container">
+            <p>Tap to fill my heart with love ❤️</p>
+            <button id="heart-btn">💖</button>
+            <p id="heart-message" class="hidden">You’ve filled my heart! 🥰</p>
+        </div>
+
+        <!-- Love Quiz -->
+        <div class="quiz-container">
+            <h3>How much do you love me? 💕</h3>
+            <button onclick="quizAnswer('a')">A Lot</button>
+            <button onclick="quizAnswer('b')">So Much</button>
+            <button onclick="quizAnswer('c')">Beyond Infinity</button>
+            <p id="quiz-response"></p>
+        </div>
+
+        <!-- Secret Surprise Button -->
+        <div class="surprise-container">
+            <button id="surprise-btn">Click for a Surprise</button>
+            <p id="surprise-message" class="hidden">You are my everything dear... Even not being in a relationship or anything, still you are my world. You are always the thing that I prayed to God for. Take your time but please forgive me and let me hold you close again. ❤️</p>
+        </div>
+</div>
+    
+    <script>
+        // Show apology page on button click
+        document.getElementById('open-apology').addEventListener('click', function () {
+            document.getElementById('landing-page').style.display = 'none';
+            document.getElementById('apology-page').classList.remove('hidden');
+        });
+
+        // Heart Button Animation
+        document.getElementById('heart-btn').addEventListener('click', function () {
+            document.getElementById('heart-message').classList.remove('hidden');
+        });
+
+        // Love Quiz Functionality
+        function quizAnswer(answer) {
+            document.getElementById('quiz-response').innerText = 'That’s the right answer! ❤️';
+        }
+
+        // Surprise Button Reveal
+        document.getElementById('surprise-btn').addEventListener('click', function () {
+            document.getElementById('surprise-message').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
